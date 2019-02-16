@@ -1,0 +1,25 @@
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+Subject: Password reset on 127.0.0.1:8000
+From: webmaster@localhost
+To: 786karimbasha786@gmail.com
+Date: Thu, 14 Feb 2019 02:30:39 -0000
+Message-ID: <20190214023039.4768.65511@DESKTOP-1KONINO>
+
+
+You're receiving this email because you requested a password reset for your user account at 127.0.0.1:8000.
+
+Please go to the following page and choose a new password:
+
+http://127.0.0.1:8000/accounts/reset/Ng/53u-a92c82e694e5f739e1b2/
+
+Your username, in case you've forgotten: karimbasha
+
+Thanks for using our site!
+
+The 127.0.0.1:8000 team
+
+
+
+-------------------------------------------------------------------------------

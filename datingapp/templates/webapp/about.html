@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+{%load staticfiles%}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{%static "css/about.css"%}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+    <title></title>
+  </head>
+  <body>
+    <nav class="navbar navbar-fixed-top">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <div class="sp">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </div>
+      </button>
+      <a class="navbar-brand" href="/resort"><span class="glyphicon glyphicon-heart" aria-hidden="true"></span> PK Resorts</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="/"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>  Home <span class="sr-only">(current)</span></a></li>
+        <li><a href="/about">About us</a></li>
+        <li><a href="/service">Services</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Contact us <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Email</a></li>
+            <li><a href="#">Phone</a></li>
+            <li><a href="#">Address</a></li>
+         </ul>
+       </li>
+       {%if user.is_authenticated%}
+ <ul class="nav navbar-nav navbar-right">
+   <li class="dropdown">
+     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{user.username}} <span class="caret"></span></a>
+     <ul class="dropdown-menu">
+       <li><a href="/detail/{{user.id}}">Personal Information</a></li>
+         <li><a href="/bookinglist">My Tickets</a></li>
+       <li><a href="/book">Book Tickets</a></li>
+    </ul>
+    {%else%}
+    <li><a href="/signup"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>Signup</a></li>
+ <li><a href="/accounts/login"><span class="glyphicon glyphicon-log-in" aria-hidden="true"></span> Login</a></li>
+ {%endif%}
+ {%if not user.is_authenticated%}
+ <p></p>
+ {%else%}
+ <li><a href="/accounts/logout"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> Logout</a></li>
+ {%endif%}
+</ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav><br><br><br><br>
+        <p>A resort is a place used for vacation, relaxation or as a daytime getaway. While this can be a single structure such as a hotel, it also can be a whole island or a ship at sea. One of the most looked-for aspects of a resort is that visitors are freed from most daily errands, which are typically taken care of by the facility’s staff. Numerous activities are usually presented at resorts, as well as massages, meals, live entertainment and cosmetic treatments.
+
+There are many types of resorts. Some cater to a certain audience, such as families or single adults, while others attempt to have a wider plea. Depending on the philosophy behind the resort, the staff might strive to meet every need the guests have, allowing them to relax quietly. In turn, some resorts might offer vigorously directed physical activities such as hiking or mountain climbing.
+
+Different resorts frequently offer very diverse experiences. Some function like a luxury hotel and give their clients a day or two of thorough relaxation. Other resorts function like small cities, even providing long-term housing for those who want a lengthy stay. Larger locations can sometimes have whole shopping malls within their borders, complete with a range of restaurants and other stores.
+
+A resort also can be built around a solitary theme. This theme could be anything from a favourite movie to a historical time period. Resorts that are built around a specific theme typically offer activities and events that are in some way related with it, such as horse riding lessons in a Western-themed ranch. The actual location of the buildings also can be used to describe some resorts. A beach or ski resort is a case of this. Even though there might be many natural or manmade allures in the immediate area, the resort itself is essentially defined by the destination.
+
+An assembly of business definitions have been established that permit a location to be consistently classified as a resort. A proper resort, conferring to these standards, bids their patrons at least one signature facility, which is distinct as the main activity the visitors can enjoy. There also is the inclusion of at least five secondary experiences, such as spa aids, sports activities and hiking trails that can be exploited. Lastly, they should offer their guests with rooms for the night and offer some type of dining prospect.</p><hr>
+<div class="content">
+  <h2><a href="/book">Make your holiday a great adventurous</a></h2><hr>
+ <img src="https://images.unsplash.com/photo-1453775910522-5d45ac4f0eae?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="">
+ <img src="https://images.unsplash.com/photo-1509995392079-ca66723ca484?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="">
+ <img src="https://images.unsplash.com/photo-1510608493064-58934ef38392?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="">
+
+ <h2><a href="/book">Make your destination marriage memorable</a></h2><hr>
+ <img src="https://images.unsplash.com/photo-1535515082057-d33cc6f76d6b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="">
+ <img src="https://images.unsplash.com/photo-1532107240529-37e00566655d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="">
+ <img src="https://images.unsplash.com/photo-1519741196428-6a2175fa2557?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="">&nbsp
+
+ <h2><a href="/book">Make your any party extravaganza</a></h2><hr>
+ <img src="https://images.unsplash.com/photo-1517457373958-b7bdd4587205?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="">
+ <img src="https://images.unsplash.com/photo-1527529482837-4698179dc6ce?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="">
+ <img src="https://images.unsplash.com/photo-1523301343968-6a6ebf63c672?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="">
+
+</div>
+
+<div class="sidebar">
+  <h2>Book Tickets</h2>
+  <h3><a href="/book">Book resort for marriage</a><br></h3>
+  <h3><a href="/book">Book resort for Birthday Party</a><br></h3>
+  <h3><a href="/book">Book tickets for hoiday outing</a><br></h3>
+  <h3><a href="/book">Book tickets for weekends</a><br></h3>
+  <hr>
+  <h2>Trending</h2>
+  <h3><a href="/book">Holiday offers</a><br></h3>
+  <h3><a href="/book">Children amusement park</a><br></h3>
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  </body>
+</html>

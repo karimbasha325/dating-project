@@ -1,0 +1,51 @@
+p{
+  margin-top: 50%;
+  background-color: #50C7A3;
+  font-family: 'Merriweather', serif;
+  font-size: 15px;
+  font-weight: 400;
+  padding-bottom: 20px;
+  padding-top:  20px;
+  margin-left: 5%;
+}
+
+.navbar{
+  background: #FF4081;
+}
+.navbar a{
+  color: white;
+}
+.icon-bar{
+  border: 1px solid white;
+}
+.sidebar{
+  width:20%;
+  float: right;
+  height: 100%;
+
+}
+.content{
+  width:80%;
+  float: left;
+  height:100%;
+  padding: 0 0 0 30px;
+}
+img{
+  width:27%;
+  height:200px;
+  float: left;
+  margin:2%;
+
+}
+.content h2{
+  text-align: center;
+  font-family: 'Dancing Script', cursive;
+}
+hr{
+  width:50%;
+}
+
+form{
+  background: #E8EAF6;
+  padding: 20px;
+}

@@ -1,0 +1,41 @@
+.container .jumbotron{
+  margin-top: 5%;
+  text-align: center;
+  padding-top: 50px;
+}
+
+.container h1{
+  font-family: 'Great Vibes', cursive;
+  font-size: 80px;
+  font-weight: 600;
+  text-shadow: 5px 5px #FF4081;
+  color:#FF4081;
+}
+.container h2{
+  text-align: center;
+  font-family: 'Dancing Script', cursive;
+}
+p{
+  font-family: 'EB Garamond', serif;
+}
+.navbar{
+  background: #FF4081;
+}
+.navbar a{
+  color: white;
+}
+
+.container img{
+  height: 300px;
+  width: 30%;
+  float: left;
+  margin: 1.66%;
+}
+.icon-bar{
+  border: 1px solid white;
+}
+
+form{
+  background: #E8EAF6;
+  padding: 20px;
+}

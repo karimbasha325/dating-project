@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+{%load staticfiles%}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{%static "css/resort.css"%}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
+    <title></title>
+  </head>
+  <body>
+    <nav class="navbar navbar-fixed-top">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <div class="sp">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </div>
+      </button>
+      <a class="navbar-brand" href="/resort"><span class="glyphicon glyphicon-heart" aria-hidden="true"></span> PK Resorts</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="/"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>  Home <span class="sr-only">(current)</span></a></li>
+        <li><a href="/about">About us</a></li>
+        <li><a href="/service">Services</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Contact us <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Email</a></li>
+            <li><a href="#">Phone</a></li>
+            <li><a href="#">Address</a></li>
+         </ul>
+       </li>
+              {%if user.is_authenticated%}
+       <ul class="nav navbar-nav navbar-right">
+         <li class="dropdown">
+           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{user.username}} <span class="caret"></span></a>
+           <ul class="dropdown-menu">
+             <li><a href="/detail/{{user.id}}">Personal Information</a></li>
+               <li><a href="/bookinglist">My Tickets</a></li>
+             <li><a href="/book">Book Tickets</a></li>
+          </ul>
+          {%else%}
+          <li><a href="/signup"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>Signup</a></li>
+       <li><a href="/accounts/login"><span class="glyphicon glyphicon-log-in" aria-hidden="true"></span> Login</a></li>
+       {%endif%}
+       {%if not user.is_authenticated%}
+       <p></p>
+       {%else%}
+       <li><a href="/accounts/logout"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> Logout</a></li>
+       {%endif%}</ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+    <div class="container">
+      <div class="jumbotron">
+        <h1>PK Resorts</h1>
+      </div>
+      <p>A destination resort is a resort that itself contains the necessary guest attraction capabilities so it does not need to be near a destination (town, historic site, theme park, or other) to attract its patrons. A commercial establishment at a resort destination such as a recreational area, a scenic or historic site, a theme park, a gaming facility, or other tourist attraction may compete with other businesses at a destination. Consequently, another quality of a destination resort is that it offers food, drink, lodging, sports, entertainment, and shopping within the facility so that guests have no need to leave the facility throughout their stay. Commonly, the facilities are of higher quality than would be expected if one were to stay at a hotel or eat in a town's restaurants. Some examples are Atlantis in the Bahamas; the Walt Disney World Resort, near Orlando, Florida, United States; PortAventura World, near Barcelona on the Costa Daurada in Spain; Costa do Sauípe, Northeastern Brazil; Laguna Phuket, Thailand and Sun City, near Johannesburg, South Africa. Closely related to resorts are convention and large meeting sites. Generally, they occur in cities, where special meeting halls, together with ample accommodations and varied dining and entertainment, are provided.</p>&nbsp
+       <h2>Make your holiday a great adventurous</h2><hr>
+      <a href="/book"><img src="https://images.unsplash.com/photo-1453775910522-5d45ac4f0eae?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt=""></a>
+      <a href="/book"><img src="https://images.unsplash.com/photo-1509995392079-ca66723ca484?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt=""></a>
+      <a href="/book"><img src="https://images.unsplash.com/photo-1510608493064-58934ef38392?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt=""></a>&nbsp
+
+      <h2>Make your destination marriage memorable</h2><hr>
+      <a href="/book"><img src="https://images.unsplash.com/photo-1535515082057-d33cc6f76d6b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt=""></a>
+      <a href="/book"><img src="https://images.unsplash.com/photo-1532107240529-37e00566655d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt=""></a>
+      <<a href="/book"><img src="https://images.unsplash.com/photo-1519741196428-6a2175fa2557?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt=""></a>&nbsp
+      <h2>Make your any party extravaganza</h2><hr>
+      <a href="/book"><img src="https://images.unsplash.com/photo-1517457373958-b7bdd4587205?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt=""></a>
+      <a href="/book"><img src="https://images.unsplash.com/photo-1527529482837-4698179dc6ce?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt=""></a>
+      <a href="/book"><img src="https://images.unsplash.com/photo-1523301343968-6a6ebf63c672?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt=""></a>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+  </body>
+</html>

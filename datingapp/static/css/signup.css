@@ -1,0 +1,17 @@
+.navbar{
+  background: #FF4081;
+}
+.navbar a{
+  color: white;
+}
+.icon-bar{
+  border: 1px solid white;
+}
+form{
+  background: #E8EAF6;
+  padding: 20px;
+}
+
+.container a{
+  border-radius:20px;
+}
