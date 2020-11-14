@@ -6,7 +6,7 @@ from django.contrib.auth.decorators import login_required
 from django.views.generic import DetailView,ListView
 from django.core.mail import send_mail
 from django.contrib.auth.models import User
-from django.core.urlresolvers import reverse
+from django.urls import reverse
 
 # Create your views here.
 def IndexView(request):
